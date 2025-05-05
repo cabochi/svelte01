@@ -1,14 +1,25 @@
 <script>
-    let person = $state({
+    let person = $state.raw({
         firstName: '',
         lastName: ''
     })
 
     function sayHello() {   
-        person.firstName = document.getElementById("firstName").value;
-        person.lastName = document.getElementById("lastName").value; 
+        person = {
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value 
+        }
     }
-    
+    // let person = $state({
+    //     firstName: '',
+    //     lastName: ''
+    // })
+
+    // function sayHello() {   
+    //     person.firstName = document.getElementById("firstName").value;
+    //     person.lastName = document.getElementById("lastName").value; 
+    // }
+
 </script>
 
 <div>
